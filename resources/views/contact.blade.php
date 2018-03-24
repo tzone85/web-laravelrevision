@@ -16,14 +16,18 @@
 
             {{ Form::label('email', 'E-Mail Address', ['class' => 'awesome']) }}
 
-            {{ Form::text('email', '') }}
+            {{ Form::text('email', '',['class' => 'form-control', 'placeholder'=>'Enter Email']) }}
         </div>
 
         <div class="form-group">
 
             {{ Form::label('message', 'Message') }}
 
-            {{ Form::textArea('message', '') }}
+            {{ Form::textArea('message', '', ['class' => 'form-control', 'placeholder'=>'Enter Message']) }}
+        </div>
+
+        <div>
+            {{ Form::submit('Submit', ['class'=>'btn btn-primary']) }}
         </div>
 
     {!! Form::close() !!}
